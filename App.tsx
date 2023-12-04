@@ -1,13 +1,21 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
+import { Provider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native';
+import Drawers from './src/navigations/Drawers';
+import Routes from './src/navigations/Routes';
 
 const App: React.FC = ({ }) => {
   return (
-    <View style={{backgroundColor: 'white', flex: 1}}>
-      <Text>
-      </Text>
-    </View>
+    <Provider>
+      <SafeAreaView style={{ backgroundColor: 'white', flex: 1 }}>
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
+      </SafeAreaView>
+
+    </Provider>
   )
 }
 
